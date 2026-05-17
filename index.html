@@ -2,149 +2,139 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Novelea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Novelles</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-      line-height: 1.6;
+    body{
+      font-family:Arial, sans-serif;
+      background:#0f172a;
+      color:white;
     }
 
-    a {
-      text-decoration: none;
-      color: white;
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 10%;
+      background:#111827;
+      position:sticky;
+      top:0;
     }
 
-    header {
-      background: #111827;
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
+    nav a{
+      color:white;
+      margin-left:20px;
+      text-decoration:none;
     }
 
-    nav a {
-      margin-left: 20px;
-      transition: 0.3s;
+    nav a:hover{
+      color:#38bdf8;
     }
 
-    nav a:hover {
-      color: #38bdf8;
+    .hero{
+      min-height:90vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:40px;
+      background:linear-gradient(135deg,#0f172a,#1e293b);
     }
 
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+    .hero h1{
+      font-size:4rem;
+      margin-bottom:20px;
     }
 
-    .hero-content h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
+    .hero p{
+      color:#cbd5e1;
+      max-width:700px;
+      margin:auto;
+      font-size:1.2rem;
     }
 
-    .hero-content p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.2rem;
-      color: #cbd5e1;
+    .btn{
+      display:inline-block;
+      margin-top:30px;
+      padding:15px 30px;
+      background:#38bdf8;
+      color:black;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
-      background: #38bdf8;
-      color: black;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: 0.3s;
+    .btn:hover{
+      background:#0ea5e9;
     }
 
-    .btn:hover {
-      background: #0ea5e9;
-      transform: translateY(-2px);
+    section{
+      padding:80px 10%;
     }
 
-    section {
-      padding: 80px 10%;
+    .section-title{
+      text-align:center;
+      font-size:2.5rem;
+      margin-bottom:50px;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-      font-size: 2.5rem;
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+    .product{
+      background:#1e293b;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.3s;
     }
 
-    .card {
-      background: #1e293b;
-      padding: 30px;
-      border-radius: 15px;
-      transition: 0.3s;
+    .product:hover{
+      transform:translateY(-5px);
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      background: #334155;
+    .product img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
     }
 
-    .card h3 {
-      margin-bottom: 15px;
-      color: #38bdf8;
+    .product-content{
+      padding:25px;
     }
 
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
+    .price{
+      color:#38bdf8;
+      font-size:1.5rem;
+      margin:15px 0;
     }
 
-    .about img {
-      width: 100%;
-      border-radius: 20px;
+    footer{
+      background:#111827;
+      text-align:center;
+      padding:30px;
+      color:#94a3b8;
     }
 
-    footer {
-      background: #111827;
-      text-align: center;
-      padding: 30px;
-      color: #94a3b8;
-    }
-
-    @media(max-width: 768px) {
-      .hero-content h1 {
-        font-size: 2.5rem;
+    @media(max-width:768px){
+      .hero h1{
+        font-size:2.5rem;
       }
 
-      .about {
-        grid-template-columns: 1fr;
-      }
-
-      header {
-        flex-direction: column;
-        gap: 15px;
+      header{
+        flex-direction:column;
+        gap:15px;
       }
     }
   </style>
@@ -152,138 +142,89 @@
 
 <body>
 
-  <header>
-    <h2>Novelea</h2>
+<header>
+  <h2>Novelles</h2>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#diensten">Diensten</a>
-      <a href="#over">Over</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Bouw iets geweldigs 🚀</h1>
+<section class="hero" id="home">
+  <div>
+    <h1>Novelles</h1>
 
-      <p>
-        Dit is een moderne gratis website template die je direct kunt gebruiken
-        voor je bedrijf, portfolio, startup of project.
-      </p>
-
-      <a href="#contact" class="btn">Neem contact op</a>
-    </div>
-  </section>
-
-  <section id="diensten">
-    <h2 class="section-title">Diensten</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Webdesign</h3>
-        <p>
-          Moderne en snelle websites gebouwd voor mobiel en desktop.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Development</h3>
-        <p>
-          Professionele websites met HTML, CSS en JavaScript.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>SEO</h3>
-        <p>
-          Geoptimaliseerd zodat mensen je beter kunnen vinden.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="over">
-    <h2 class="section-title">Over Ons</h2>
-
-    <div class="about">
-
-      <div>
-        <img src="https://www.deelplaatjes.nl/img/deelplaatjes-nl-zie-je-deze.418292.webp">
-      </div>
-
-      <div>
-        <h3 style="margin-bottom:20px; font-size:2rem;">
-          Wij bouwen moderne websites
-        </h3>
-
-        <p>
-          Deze website draait volledig op simpele HTML en CSS en kan gratis
-          gehost worden via GitHub Pages.
-        </p>
-
-        <br>
-
-        <p>
-          Je kunt alles aanpassen:
-          kleuren, teksten, afbeeldingen en secties.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2 class="section-title">Contact</h2>
-
-    <div class="card" style="max-width:700px; margin:auto;">
-
-      <form>
-
-        <div style="margin-bottom:20px;">
-          <input
-            type="text"
-            placeholder="Naam"
-            style="width:100%; padding:15px; border:none; border-radius:10px;"
-          >
-        </div>
-
-        <div style="margin-bottom:20px;">
-          <input
-            type="email"
-            placeholder="Email"
-            style="width:100%; padding:15px; border:none; border-radius:10px;"
-          >
-        </div>
-
-        <div style="margin-bottom:20px;">
-          <textarea
-            placeholder="Bericht"
-            rows="6"
-            style="width:100%; padding:15px; border:none; border-radius:10px;"
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          class="btn"
-          style="border:none; cursor:pointer;"
-        >
-          Versturen
-        </button>
-
-      </form>
-
-    </div>
-  </section>
-
-  <footer>
     <p>
-      © 2026 MijnWebsite — Alle rechten voorbehouden.
+      Ontdek exclusieve producten van Novelles.
+      Modern design, snelle levering en premium kwaliteit.
     </p>
-  </footer>
+
+    <a href="#shop" class="btn">Shop Nu</a>
+  </div>
+</section>
+
+<section id="shop">
+
+  <h2 class="section-title">Onze Producten</h2>
+
+  <div class="products">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="product-content">
+        <h3>Premium T-Shirt</h3>
+
+        <p>
+          Minimalistisch design met premium kwaliteit.
+        </p>
+
+        <div class="price">€39,95</div>
+
+        <!-- STRIPE LINK HIER -->
+        <a href="#" class="btn">
+          Koop Nu
+        </a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="product-content">
+        <h3>Limited Sneakers</h3>
+
+        <p>
+          Exclusieve sneakers met modern ontwerp.
+        </p>
+
+        <div class="price">€89,95</div>
+
+        <a href="#" class="btn">
+          Koop Nu
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contact">
+
+  <h2 class="section-title">Contact</h2>
+
+  <div style="text-align:center;">
+    <p>Email: info@novelles.nl</p>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Novelles.nl</p>
+</footer>
 
 </body>
 </html>

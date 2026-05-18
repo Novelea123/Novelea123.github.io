@@ -17,7 +17,6 @@
   <nav>
     <a href="#">Home</a>
     <a href="#products">Producten</a>
-    <a href="#cart">Winkelwagen</a>
   </nav>
 </header>
 
@@ -36,6 +35,7 @@
 
 <section id="products" class="products">
 
+  <!-- PRODUCT 1 -->
   <div class="product">
 
     <img src="https://media.s-bol.com/LrWJMONlDJjA/vgLmXBV/1200x1113.jpg">
@@ -46,14 +46,20 @@
       Schilt appels automatisch binnen enkele seconden.
     </p>
 
-    <div class="price">€29,95</div>
+    <div class="price">€19,95</div>
 
-    <button onclick="addToCart('Automatische Appelschiller', 29.95)">
-      Voeg toe
-    </button>
+    <!-- STRIPE LINK PRODUCT 1 -->
+    <a 
+      href="https://buy.stripe.com/test_28E6oJfol74z6D42Fs7g400"
+      class="buy-btn"
+      target="_blank"
+    >
+      Koop Nu
+    </a>
 
   </div>
 
+  <!-- PRODUCT 2 -->
   <div class="product">
 
     <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
@@ -66,36 +72,22 @@
 
     <div class="price">€49,95</div>
 
-    <button onclick="addToCart('Solar Noodradio', 49.95)">
-      Voeg toe
-    </button>
+    <!-- STRIPE LINK PRODUCT 2 -->
+    <a 
+      href="HIER_JE_STRIPE_LINK_VOOR_NOODRADIO"
+      class="buy-btn"
+      target="_blank"
+    >
+      Koop Nu
+    </a>
 
   </div>
-
-</section>
-
-<section id="cart" class="cart-section">
-
-  <h2>Winkelwagen</h2>
-
-  <div id="cart-items"></div>
-
-  <div class="cart-total">
-    Totaal: €<span id="total">0</span>
-  </div>
-
-  <!-- STRIPE CHECKOUT LINK -->
-  <a href="https://buy.stripe.com/test_28E6oJfol74z6D42Fs7g400" class="checkout-btn">
-    Afrekenen
-  </a>
 
 </section>
 
 <footer>
   © 2026 Novelea
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>

@@ -6,8 +6,6 @@
 
   <title>Novelea</title>
 
-  <link rel="stylesheet" href="style.css">
-
   <style>
 
     *{
@@ -18,89 +16,120 @@
     }
 
     body{
-      background:#f7f8fc;
-      color:#222;
+      background:#f4f6f8;
+      color:#1f2937;
     }
+
+    /* HEADER */
 
     header{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:20px 8%;
+      padding:22px 8%;
       background:white;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      box-shadow:0 4px 20px rgba(0,0,0,0.05);
       position:sticky;
       top:0;
+      z-index:1000;
     }
 
     .logo{
-      font-size:28px;
+      font-size:30px;
       font-weight:bold;
-      color:#4f46e5;
+      color:#0f172a;
+      letter-spacing:1px;
     }
 
     nav a{
-      margin-left:25px;
+      margin-left:28px;
       text-decoration:none;
-      color:#333;
+      color:#374151;
       font-weight:600;
       transition:0.3s;
     }
 
     nav a:hover{
-      color:#4f46e5;
+      color:#0f766e;
     }
 
+    /* HERO */
+
     .hero{
-      padding:100px 8%;
-      text-align:center;
-      background:linear-gradient(to right,#4f46e5,#7c3aed);
+      background:linear-gradient(135deg,#0f172a,#134e4a);
       color:white;
+      padding:120px 8%;
+      text-align:center;
     }
 
     .hero h1{
-      font-size:55px;
+      font-size:58px;
       margin-bottom:20px;
+      line-height:1.2;
     }
 
     .hero p{
       font-size:20px;
-      max-width:700px;
+      max-width:750px;
       margin:auto;
-      line-height:1.6;
+      line-height:1.8;
+      color:#d1d5db;
     }
 
+    /* OVER MIJ */
+
     .about{
-      padding:80px 8%;
+      padding:90px 8%;
+    }
+
+    .about-container{
+      display:flex;
+      align-items:center;
+      gap:50px;
       background:white;
+      border-radius:30px;
+      padding:50px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.06);
+      flex-wrap:wrap;
+    }
+
+    .about-image{
+      flex:1;
+      min-width:250px;
       text-align:center;
     }
 
-    .about-box{
-      max-width:850px;
-      margin:auto;
-      background:#f7f8fc;
-      padding:50px;
+    .about-image img{
+      width:280px;
+      height:280px;
+      object-fit:cover;
       border-radius:25px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
     }
 
-    .about h2{
-      font-size:38px;
-      margin-bottom:25px;
-      color:#4f46e5;
+    .about-text{
+      flex:2;
+      min-width:300px;
     }
 
-    .about p{
+    .about-text h2{
+      font-size:42px;
+      margin-bottom:20px;
+      color:#0f172a;
+    }
+
+    .about-text p{
       font-size:18px;
-      line-height:1.8;
-      color:#444;
+      line-height:1.9;
+      color:#4b5563;
     }
+
+    /* PRODUCTEN */
 
     .products{
-      padding:80px 8%;
+      padding:20px 8% 90px;
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
       gap:40px;
     }
 
@@ -108,7 +137,7 @@
       background:white;
       border-radius:25px;
       overflow:hidden;
-      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      box-shadow:0 12px 30px rgba(0,0,0,0.07);
       transition:0.3s;
     }
 
@@ -123,70 +152,82 @@
     }
 
     .product h2{
-      padding:20px 20px 10px;
-      font-size:24px;
+      padding:24px 24px 12px;
+      font-size:26px;
+      color:#111827;
     }
 
     .product p{
-      padding:0 20px;
-      color:#555;
-      line-height:1.6;
+      padding:0 24px;
+      color:#6b7280;
+      line-height:1.7;
+      font-size:16px;
     }
 
     .price{
-      padding:20px;
-      font-size:28px;
+      padding:24px;
+      font-size:30px;
       font-weight:bold;
-      color:#4f46e5;
+      color:#0f766e;
     }
 
     .buy-btn{
       display:block;
-      margin:0 20px 25px;
+      margin:0 24px 28px;
       text-align:center;
-      background:#4f46e5;
+      background:#0f766e;
       color:white;
-      padding:15px;
-      border-radius:12px;
+      padding:16px;
+      border-radius:14px;
       text-decoration:none;
       font-weight:bold;
       transition:0.3s;
     }
 
     .buy-btn:hover{
-      background:#372fcf;
+      background:#115e59;
     }
+
+    /* FOOTER */
 
     footer{
-      text-align:center;
-      padding:40px;
-      background:#111827;
+      background:#0f172a;
       color:white;
-      margin-top:50px;
+      text-align:center;
+      padding:45px;
+      margin-top:40px;
     }
 
-    @media(max-width:768px){
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
 
       .hero h1{
-        font-size:40px;
+        font-size:42px;
       }
 
       .hero p{
         font-size:18px;
       }
 
-      .about-box{
-        padding:30px;
+      .about-container{
+        padding:35px;
+      }
+
+      .about-text h2{
+        font-size:34px;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
 
 <header>
+
   <div class="logo">Novelea</div>
 
   <nav>
@@ -194,47 +235,65 @@
     <a href="#about">Over mij</a>
     <a href="#products">Producten</a>
   </nav>
+
 </header>
 
 <section class="hero">
 
-  <div class="hero-text">
-    <h1>Innovatie voor thuis en onderweg.</h1>
+  <h1>Innovatieve gadgets voor elke dag.</h1>
 
-    <p>
-      Slimme gadgets ontworpen voor gemak,
-      noodsituaties en dagelijks gebruik.
-    </p>
-  </div>
+  <p>
+    Ontdek slimme producten voor thuis, onderweg
+    en noodsituaties — zorgvuldig uitgekozen op kwaliteit,
+    gemak en innovatie.
+  </p>
 
 </section>
 
 <!-- OVER MIJ -->
+
 <section id="about" class="about">
 
-  <div class="about-box">
+  <div class="about-container">
 
-    <h2>Over Mij</h2>
+    <!-- FOTO -->
+    <div class="about-image">
 
-    <p>
-      Hoi! Ik ben de oprichter van Novelea en ik ben 14 jaar oud.
-      Ik heb deze website gemaakt omdat ik het leuk vind om slimme
-      en handige gadgets te ontdekken die het dagelijks leven makkelijker maken.
-      Daarnaast wilde ik graag iets opbouwen waar ik andere mensen mee kan helpen,
-      terwijl ik tegelijkertijd leer hoe ondernemen en websites maken werkt.
-      <br><br>
-      Op Novelea vind je handige producten voor thuis,
-      onderweg en noodsituaties — zorgvuldig uitgekozen op kwaliteit,
-      gemak en innovatie.
-    </p>
+      <!-- HIER KUN JE JE EIGEN FOTO PLAATSEN -->
+      <img src="jouw-foto.jpg" alt="Foto van mij">
+
+    </div>
+
+    <!-- TEKST -->
+    <div class="about-text">
+
+      <h2>Over Mij</h2>
+
+      <p>
+        Hoi! Ik ben de oprichter van Novelea en ik ben 14 jaar oud.
+        Ik heb deze website opgericht omdat ik het leuk vind om
+        slimme en handige gadgets te ontdekken die mensen écht helpen.
+        Daarnaast wilde ik leren hoe ondernemen, websites maken en
+        online verkopen werkt.
+        <br><br>
+        Op Novelea deel ik zorgvuldig uitgekozen producten die handig zijn
+        voor thuis, onderweg en in noodsituaties. Mijn doel is om een
+        moderne en betrouwbare webshop op te bouwen met producten
+        die het dagelijks leven makkelijker maken.
+      </p>
+
+    </div>
 
   </div>
 
 </section>
 
+<!-- PRODUCTEN -->
+
 <section id="products" class="products">
 
   <!-- PRODUCT 1 -->
+
   <div class="product">
 
     <img src="https://media.s-bol.com/LrWJMONlDJjA/vgLmXBV/1200x1113.jpg">
@@ -243,6 +302,7 @@
 
     <p>
       Schilt appels automatisch binnen enkele seconden.
+      Perfect voor snel en gemakkelijk koken.
     </p>
 
     <div class="price">€19,95</div>
@@ -258,6 +318,7 @@
   </div>
 
   <!-- PRODUCT 2 -->
+
   <div class="product">
 
     <img src="https://img.kwcdn.com/product/fancy/c0a794ef-9fd2-419b-a6a2-65c38bbeb692.jpg?imageView2/2/w/800/q/70/format/avif">
@@ -265,8 +326,8 @@
     <h2>Solar Noodradio</h2>
 
     <p>
-      Werkt op zonne-energie. Ook zit er een zaklamp op.
-      Je kunt er ook mee opladen. Ideaal voor noodpakketten.
+      Werkt op zonne-energie en bevat een zaklamp
+      én powerbankfunctie. Ideaal voor noodsituaties.
     </p>
 
     <div class="price">€24,95</div>
@@ -284,7 +345,7 @@
 </section>
 
 <footer>
-  © 2026 Novelea
+  © 2026 Novelea — Alle rechten voorbehouden
 </footer>
 
 </body>

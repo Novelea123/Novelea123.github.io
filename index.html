@@ -7,6 +7,181 @@
   <title>Novelea</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f7f8fc;
+      color:#222;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      position:sticky;
+      top:0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#4f46e5;
+    }
+
+    nav a{
+      margin-left:25px;
+      text-decoration:none;
+      color:#333;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#4f46e5;
+    }
+
+    .hero{
+      padding:100px 8%;
+      text-align:center;
+      background:linear-gradient(to right,#4f46e5,#7c3aed);
+      color:white;
+    }
+
+    .hero h1{
+      font-size:55px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:20px;
+      max-width:700px;
+      margin:auto;
+      line-height:1.6;
+    }
+
+    .about{
+      padding:80px 8%;
+      background:white;
+      text-align:center;
+    }
+
+    .about-box{
+      max-width:850px;
+      margin:auto;
+      background:#f7f8fc;
+      padding:50px;
+      border-radius:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .about h2{
+      font-size:38px;
+      margin-bottom:25px;
+      color:#4f46e5;
+    }
+
+    .about p{
+      font-size:18px;
+      line-height:1.8;
+      color:#444;
+    }
+
+    .products{
+      padding:80px 8%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+    }
+
+    .product{
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .product:hover{
+      transform:translateY(-8px);
+    }
+
+    .product img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+    }
+
+    .product h2{
+      padding:20px 20px 10px;
+      font-size:24px;
+    }
+
+    .product p{
+      padding:0 20px;
+      color:#555;
+      line-height:1.6;
+    }
+
+    .price{
+      padding:20px;
+      font-size:28px;
+      font-weight:bold;
+      color:#4f46e5;
+    }
+
+    .buy-btn{
+      display:block;
+      margin:0 20px 25px;
+      text-align:center;
+      background:#4f46e5;
+      color:white;
+      padding:15px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .buy-btn:hover{
+      background:#372fcf;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px;
+      background:#111827;
+      color:white;
+      margin-top:50px;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .about-box{
+        padding:30px;
+      }
+
+    }
+
+  </style>
 </head>
 
 <body>
@@ -16,6 +191,7 @@
 
   <nav>
     <a href="#">Home</a>
+    <a href="#about">Over mij</a>
     <a href="#products">Producten</a>
   </nav>
 </header>
@@ -29,6 +205,29 @@
       Slimme gadgets ontworpen voor gemak,
       noodsituaties en dagelijks gebruik.
     </p>
+  </div>
+
+</section>
+
+<!-- OVER MIJ -->
+<section id="about" class="about">
+
+  <div class="about-box">
+
+    <h2>Over Mij</h2>
+
+    <p>
+      Hoi! Ik ben de oprichter van Novelea en ik ben 14 jaar oud.
+      Ik heb deze website gemaakt omdat ik het leuk vind om slimme
+      en handige gadgets te ontdekken die het dagelijks leven makkelijker maken.
+      Daarnaast wilde ik graag iets opbouwen waar ik andere mensen mee kan helpen,
+      terwijl ik tegelijkertijd leer hoe ondernemen en websites maken werkt.
+      <br><br>
+      Op Novelea vind je handige producten voor thuis,
+      onderweg en noodsituaties — zorgvuldig uitgekozen op kwaliteit,
+      gemak en innovatie.
+    </p>
+
   </div>
 
 </section>
@@ -48,7 +247,6 @@
 
     <div class="price">€19,95</div>
 
-    <!-- GOOGLE FORM / TIKKIE LINK -->
     <a 
       href="https://docs.google.com/forms/d/e/1FAIpQLSezFVt7OMlfKz6ISa7KLIBCk2YYynAnr3A9xYPwDJk6sg7JbA/viewform?usp=dialog"
       class="buy-btn"
@@ -67,12 +265,12 @@
     <h2>Solar Noodradio</h2>
 
     <p>
-      Werkt op zonne-energie. Ook zit er een zaklamp op. Je kunt er ook mee opladen. Ideaal voor noodpakketten.
+      Werkt op zonne-energie. Ook zit er een zaklamp op.
+      Je kunt er ook mee opladen. Ideaal voor noodpakketten.
     </p>
 
     <div class="price">€24,95</div>
 
-    <!-- GOOGLE FORM / TIKKIE LINK -->
     <a 
       href="https://docs.google.com/forms/d/e/1FAIpQLScrVyG3I65hSCQR2hn8RWpmQ11Fj3rnANlJItsvFa_z1vnTKg/viewform?usp=publish-editor"
       class="buy-btn"

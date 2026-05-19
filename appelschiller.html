@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Automatische Appelschiller | Novelea</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:#f4f6f8;
+      color:#1f2937;
+    }
+
+    header{
+      background:#0f172a;
+      color:white;
+      padding:25px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:bold;
+    }
+
+    .back-btn{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:70px 8%;
+    }
+
+    .product-box{
+      background:white;
+      border-radius:30px;
+      padding:45px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    }
+
+    .video-box{
+      margin-bottom:40px;
+    }
+
+    video{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    h1{
+      font-size:48px;
+      margin-bottom:20px;
+      color:#111827;
+    }
+
+    p{
+      font-size:18px;
+      line-height:1.9;
+      color:#4b5563;
+    }
+
+    .price{
+      font-size:42px;
+      font-weight:bold;
+      color:#0f766e;
+      margin:35px 0;
+    }
+
+    .buy-btn{
+      display:inline-block;
+      background:#0f766e;
+      color:white;
+      padding:18px 38px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .buy-btn:hover{
+      background:#115e59;
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:36px;
+      }
+
+      .product-box{
+        padding:30px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">Novelea</div>
+
+  <a href="index.html" class="back-btn">
+    ← Terug
+  </a>
+
+</header>
+
+<div class="container">
+
+  <div class="product-box">
+
+    <!-- VIDEO -->
+
+    <div class="video-box">
+
+      <!-- ZET HIER JE VIDEO -->
+      <video controls>
+
+        <source src="appelschiller-video.mp4" type="video/mp4">
+
+      </video>
+
+    </div>
+
+    <h1>Automatische Appelschiller</h1>
+
+    <p>
+      Deze automatische appelschiller schilt appels binnen enkele seconden
+      en maakt koken sneller en makkelijker. Perfect voor dagelijks gebruik,
+      bakken en meal-prepping.
+      <br><br>
+      Dankzij het slimme ontwerp hoef je bijna geen moeite meer te doen
+      en bespaar je veel tijd in de keuken.
+    </p>
+
+    <div class="price">
+      €19,95
+    </div>
+
+    <a 
+      href="https://docs.google.com/forms/d/e/1FAIpQLSezFVt7OMlfKz6ISa7KLIBCk2YYynAnr3A9xYPwDJk6sg7JbA/viewform?usp=dialog"
+      class="buy-btn"
+      target="_blank"
+    >
+      Bestellen
+    </a>
+
+  </div>
+
+</div>
+
+</body>
+</html>

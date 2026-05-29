@@ -103,6 +103,29 @@ nav a:hover{
   font-weight:bold;
 }
 
+/* VOORRAAD */
+.stock{
+  margin-left:20px;
+  margin-bottom:15px;
+  font-size:0.95rem;
+  font-weight:600;
+  color:#15803d;
+  background:#dcfce7;
+  padding:10px 16px;
+  border-radius:999px;
+  display:inline-block;
+}
+
+.low-stock{
+  color:#b45309;
+  background:#fef3c7;
+}
+
+.out-stock{
+  color:#b91c1c;
+  background:#fee2e2;
+}
+
 /* STRIPE KOOPKNOP */
 .buy-btn{
   display:inline-block;
